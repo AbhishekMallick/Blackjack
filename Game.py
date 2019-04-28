@@ -58,7 +58,7 @@ class Game:
             self.endGame = True
 
     def __dealerTurn(self):
-        print(f'Alright your final score is {self.playerScore}.')
+        print(f'Alright your final score is {self.playerScore}.\n')
         print('The dealer is going to start drawing now!')
 
         while (self.dealerScore <= self.playerScore):
