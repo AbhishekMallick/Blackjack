@@ -39,8 +39,7 @@ class Game:
         # get next card and add to player score
         card = self.cardDeck.getACard()
         # if the next card is Ace, and both 1 and 11 fit in the score ask the player whether to treat is as 1 or 11
-        # TODO: add helper to get card name from deck
-        print(f'The card drawn is {card[1]} of {card[0]}') 
+        print(f'The card drawn is {self.cardDeck.getName(card[0], card[1])}')
         if (card[1] == 1 and self.playerScore <= 10):
             self.playerScore += self.__addOneOrEleven()
         elif(card[1] >= 10):
@@ -65,7 +64,7 @@ class Game:
             time.sleep(3)
             print('Dealer hits')
             card = self.cardDeck.getACard()
-            print(f'The card drawn is {card[1]} of {card[0]}')
+            print(f'The card drawn is {self.cardDeck.getName(card[0], card[1])}')
             if (card[1] == 1):
                 if (self.dealerScore <= 10):
                     self.dealerScore += 11
