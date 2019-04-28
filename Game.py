@@ -82,7 +82,7 @@ class Game:
             if (self.dealerScore > 21):
                 print(f'The dealer has busted! You Win!!')
                 self.endGame = True
-            if (self.dealerScore > self.playerScore):
+            elif (self.dealerScore > self.playerScore):
                 print(f'The dealer wins. You lose.')
                 self.endGame = True
 
