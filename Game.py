@@ -62,7 +62,7 @@ class Game:
         print('The dealer is going to start drawing now!')
 
         while (self.dealerScore <= self.playerScore):
-            time.sleep()
+            time.sleep(3)
             print('Dealer hits')
             card = self.cardDeck.getACard()
             print(f'The card drawn is {card[1]} of {card[0]}')
